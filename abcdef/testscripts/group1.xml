@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="abcdef by groups" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="GRP-g1" verbose="2">
+    <groups>
+      <run>
+        <exclude name="g1"/>
+        <include name="g2"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="abcd.GroupTest"/>
+      <class name="abcd.GroupTest1"/>
+    </classes>
+  </test> <!-- GRP-g1 -->
+</suite> <!-- abcdef by groups -->

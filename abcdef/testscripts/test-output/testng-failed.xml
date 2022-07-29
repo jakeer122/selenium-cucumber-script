@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" parallel="tests">
+  <test thread-count="5" name="Sanity test in GC(failed)" parallel="tests">
+    <parameter name="browser" value="GC"/>
+    <classes>
+      <class name="abcd.Testngfb">
+        <methods>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="fblogin"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- abcd.Testngfb -->
+      <class name="abcd.WindowHandle">
+        <methods>
+          <include name="fblogin"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- abcd.WindowHandle -->
+    </classes>
+  </test> <!-- Sanity test in GC(failed) -->
+  <test thread-count="5" name="Sanity test(failed)" parallel="tests">
+    <parameter name="browser" value="EB"/>
+    <classes>
+      <class name="abcd.Testngfb">
+        <methods>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="fblogin"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- abcd.Testngfb -->
+      <class name="abcd.WindowHandle">
+        <methods>
+          <include name="fblogin"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- abcd.WindowHandle -->
+    </classes>
+  </test> <!-- Sanity test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
